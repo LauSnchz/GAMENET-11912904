@@ -122,7 +122,7 @@ public class Shooting : MonoBehaviourPunCallbacks
         Debug.Log(info.Sender.NickName + "Score: " + info.Sender.GetScore());
         Debug.Log(info.photonView.Owner.NickName + "Score: " + info.photonView.Owner.GetScore());
 
-        if (info.Sender.GetScore() == 3)
+        if (info.Sender.GetScore() == 10)
         {
             // display text
             GameObject winText = GameObject.Find("Winning Text");
