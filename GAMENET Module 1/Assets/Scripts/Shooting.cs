@@ -12,6 +12,9 @@ public class Shooting : MonoBehaviour
     public float fireRate = 0.1f;
     private float fireTimer = 0;
 
+    [Header("Health Related")]
+    public float startHealth = 100;
+    private float health;
 
     // Update is called once per frame
     void Update()
