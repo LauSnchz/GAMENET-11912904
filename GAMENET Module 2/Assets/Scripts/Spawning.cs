@@ -9,14 +9,16 @@ public class Spawning : MonoBehaviour
 
     private void Awake()
     {
-        if (instance != null)
-        {
-            Destroy(this.gameObject);
-        }
-        else
+        if (instance == null)
         {
             instance = this;
         }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
+
+        DontDestroyOnLoad(gameObject);
     }
     void Start()
     {
